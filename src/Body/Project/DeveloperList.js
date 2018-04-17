@@ -1,0 +1,46 @@
+import React from "react";
+import {
+    Table,
+    TableBody,
+    TableHeader,
+    TableHeaderColumn,
+    TableRow,
+    TableRowColumn,
+} from 'material-ui/Table';
+import {MuiThemeProvider} from "material-ui";
+
+
+export default ProjectList
+
+function ProjectList(props) {
+    return (
+        <div>
+            <MuiThemeProvider>
+                <Table>
+                    <TableHeader
+                        displaySelectAll={false}
+                        adjustForCheckbox={false}>
+                        <TableRow>
+                            <TableHeaderColumn>ID</TableHeaderColumn>
+                            <TableHeaderColumn>Login</TableHeaderColumn>
+                            <TableHeaderColumn>Name</TableHeaderColumn>
+                            <TableHeaderColumn>Email</TableHeaderColumn>
+                            <TableHeaderColumn>Phone</TableHeaderColumn>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody displayRowCheckbox={false}>
+                        {props.developers.map(c =>
+                            <TableRow>
+                                <TableRowColumn>{c.id}</TableRowColumn>
+                                <TableRowColumn>{c.login}</TableRowColumn>
+                                <TableRowColumn>{c.name}</TableRowColumn>
+                                <TableRowColumn>{c.email}</TableRowColumn>
+                                <TableRowColumn>{c.tel}</TableRowColumn>
+                            </TableRow>
+                        )}
+                    </TableBody>
+                </Table>
+            </MuiThemeProvider>
+        </div>
+    );
+}

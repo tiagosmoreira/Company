@@ -1,0 +1,73 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.button{
+  width: 100%;
+  height: 7vh;
+  background-color: transparent;
+  border: 0;
+}
+.menu div{
+  padding: 0px !important;
+}
+.button:focus{
+  outline: none !important;
+  border: none !important;
+}
+
+.CRUDButton{
+  border: 0;
+}
+
+.table{
+    position: fixed;
+    bottom: 7%;
+    width: 100%;
+}
+
+.clientDiv{
+    padding-top: 3%;
+}
+
+.divL{
+    padding-left: -100%;
+}
+
+.TheEx{
+    padding-top: 10%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
